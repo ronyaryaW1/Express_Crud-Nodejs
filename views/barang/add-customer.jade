@@ -1,0 +1,64 @@
+extends ../layout/base 
+block content 
+	section.content-header 
+		h1 
+			| Blank Page
+			small it all starts here
+		ol.breadcrumb 
+			li 
+				a(href='#') 
+					i.fa.fa-dashboard
+					| Level 
+			li.active Here 
+	section.content
+		.box
+			.box-header.with-border
+				h3.box-title
+					| Barang Customer
+				.box-tools.pull-right
+					button(type='button', data-widget='collapse', data-toggle='tooltip',title='collapse').btn.btn-box-tool
+						i.fa.fa-minus
+					
+			.box-body
+				form(role='form',method='post' action='/barang/add')
+					.row
+						
+						.col-xs-6
+							.box-body
+								- if (messages.msg_error) 
+									.alert.alert-danger.alert-dismissable 
+										button.close(type='button', data-dismiss='alert', aria-hidden='true') 
+											| ×
+										h4
+											i.icon.fa.fa-ban
+											| Alert! 
+										| !{messages.msg_error}
+								.form-group
+									label
+										| kode
+									input(type='text',value='#{kode}',name='kode',placeholder='Enter kode', autofocus).form-control
+								.form-group
+									label
+										| nama
+									input(type='text',value='#{nama}',name='nama',placeholder='Enter nama', autofocus).form-control
+								.form-group
+									label
+										| merek
+									input(type='text',value='#{merek}',name='merek',placeholder='Enter merek').form-control
+								.form-group
+									label
+										| satuan
+									input(type='text',name='satuan',placeholder='Enter satuan').form-control
+								.form-group
+									label
+										| jumlah
+									input(type='text',name='jumlah',placeholder='Enter jumlah').form-control
+								.form-group
+									label
+										| harga
+									input(type='text',name='harga',placeholder='Enter harga').form-control
+							.box-footer
+								button(type='submit').btn.btn-primary
+									| Submit
+								a(href='/barang').btn.btn-primary.pull-right
+									| Back
