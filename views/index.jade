@@ -2,4 +2,16 @@ extends layout
 
 block content
   h1= title
-  p Welcome to #{title}
+  p Masukkan Kode Pasien
+
+  from 
+    input(type="kode" name="kode") 
+    br
+   <button type="button" class="btn btn-success">Success</button>
+  from
+  br
+  br
+  img(src='/adminlte/dist/img/user2-160x160.jpg',alt='User Image').img-circle
+  p Nama     = Jony 
+  p Penyakit = flu
+  p obat     = Lem Kayu

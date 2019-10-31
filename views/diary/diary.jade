@@ -1,0 +1,15 @@
+extends ../layout/base
+
+block content
+  h1= title
+  img(src='/adminlte/dist/img/user2-160x160.jpg',alt='User Image').img-circle
+  p Masukkan Kode Pasien
+  p Nama     = Jony 
+  p Penyakit = flu
+  p obat     = Lem Kayu
+  <button type="button" class="btn btn-success">Success</button>
+  .box-body
+        .form-group
+            label
+                | Name
+            input(type='text',value='#{name}',name='name',placeholder='Enter Name', autofocus).form-control
